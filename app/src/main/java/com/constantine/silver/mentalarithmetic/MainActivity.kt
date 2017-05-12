@@ -23,13 +23,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         println("Main создан")
-        classic_mode.setOnClickListener { startActivity<ClassicMode>("PARAM_TEXT" to "start!") }
+        classic_mode.setOnClickListener { startActivity<ModeClassic>("PARAM_TEXT" to "start!") }
         button_exit.setOnClickListener { super.onBackPressed() }
-        fab.setOnClickListener {
-            it.snack(R.string.str_notify) {
-                action(R.string.str_cancel, Color.YELLOW) { toast("Canceled") }
-            }
-        }
 
         val toggle = ActionBarDrawerToggle(
                 this, drawer_layout, toolbar, navigation_drawer_open, navigation_drawer_close)

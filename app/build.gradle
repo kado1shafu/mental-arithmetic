@@ -26,15 +26,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:support-v4:24.2.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
-    testCompile 'junit:junit:4.12'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'org.jetbrains.anko:anko-sdk15:0.9.1'
     compile 'org.jetbrains.anko:anko-support-v4:0.9.1'
     compile 'org.jetbrains.anko:anko-appcompat-v7:0.9.1'
+    compile 'com.github.zcweng:switch-button:0.0.3@aar'//https://github.com/zcweng/SwitchButton
+    compile 'com.github.ceryle:SegmentedButton:v1.2.2'//https://github.com/ceryle/SegmentedButton
+    compile 'com.xiaochendev.progressroundbtn:library:2.0.0'//https://github.com/cctanfujun/ProgressRoundButton
+    testCompile 'junit:junit:4.12'
 }
 repositories {
     mavenCentral()
