@@ -15,4 +15,5 @@
     <string name="text_switch_pow">Возведение в степень</string>
     <string name="select_num_oper">Выберите количество операций</string>
     <string name="begin">начать</string>
+    <string name="go">GO</string>
 </resources>

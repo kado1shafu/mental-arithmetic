@@ -37,6 +37,7 @@ dependencies {
     compile 'com.github.zcweng:switch-button:0.0.3@aar'//https://github.com/zcweng/SwitchButton
     compile 'com.github.ceryle:SegmentedButton:v1.2.2'//https://github.com/ceryle/SegmentedButton
     compile 'com.xiaochendev.progressroundbtn:library:2.0.0'//https://github.com/cctanfujun/ProgressRoundButton
+    compile 'com.github.Hitomis:CircleMenu:v1.1.0'
     testCompile 'junit:junit:4.12'
 }
 repositories {

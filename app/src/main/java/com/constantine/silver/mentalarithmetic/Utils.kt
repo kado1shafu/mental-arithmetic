@@ -1,5 +1,7 @@
 package com.constantine.silver.mentalarithmetic
 
+import android.app.Activity
+import android.os.Handler
 import android.support.annotation.ColorInt
 import android.support.annotation.StringRes
 import android.support.design.widget.Snackbar
@@ -19,4 +21,11 @@ inline fun View.snack(@StringRes messageResId: Int, length: Int = Snackbar.LENGT
 fun Snackbar.action(@StringRes textResId: Int, @ColorInt color: Int? = null, listener: (View) -> Unit) {
     setAction(textResId, listener)
     color?.let { setActionTextColor(color) }
+}
+
+inline fun delayStart(crossinline f: () -> Unit){
+    val handler = Handler()
+    handler.postDelayed(Runnable {
+        f()
+    }, 620)
 }

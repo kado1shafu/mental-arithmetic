@@ -127,6 +127,7 @@
     <orderEntry type="library" exported="" name="constraint-layout-solver-1.0.0-alpha9" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-integration-1.3" level="project" />
     <orderEntry type="library" exported="" name="kotlin-stdlib-jre7-1.1.2-3" level="project" />
+    <orderEntry type="library" exported="" name="CircleMenu-v1.1.0" level="project" />
     <orderEntry type="library" exported="" name="support-fragment-25.1.0" level="project" />
     <orderEntry type="library" exported="" name="anko-common-0.9.1" level="project" />
     <orderEntry type="library" exported="" name="anko-support-v4-0.9.1" level="project" />
