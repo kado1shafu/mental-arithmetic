@@ -3,6 +3,7 @@ package com.constantine.silver.mentalarithmetic
 import android.graphics.Color
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.constantine.silver.mentalarithmetic.libs.CircularAnim
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.contentView
 import org.jetbrains.anko.startActivity

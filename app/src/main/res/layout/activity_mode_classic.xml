@@ -7,215 +7,158 @@
     tools:context="com.constantine.silver.mentalarithmetic.ModeClassic">
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/layoutContent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
+        android:padding="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1">
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/mathExpression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="A + B"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/text_switch_add"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_classic_mode"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_addition"
-                android:layout_width="73dp"
-                android:layout_height="36dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:sb_checked_color="@android:color/holo_blue_dark"/>
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/text_switch_mult"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_classic_mode"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_mult"
-                android:layout_width="73dp"
-                android:layout_height="36dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:sb_checked_color="@android:color/holo_blue_dark"/>
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/text_switch_pow"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_classic_mode"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.suke.widget.SwitchButton
-                android:id="@+id/switch_pow"
-                android:layout_width="73dp"
-                android:layout_height="36dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:sb_checked_color="@android:color/holo_blue_dark"/>
-        </android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="15dp"
+            android:text="MATH CHALLENGE"
+            android:textSize="18sp" />
 
         <LinearLayout
+            android:id="@+id/layoutUserProgress"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center_horizontal"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:paddingStart="0dp"
-            android:paddingTop="50dp">
+            android:paddingTop="25dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="0dp"
+                android:paddingBottom="5dp"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/progressStatePercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="99%"
+                        android:textAlignment="textStart" />
+
+                    <TextView
+                        android:id="@+id/levelUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Level 5"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/progressStateInt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="199/200"
+                        android:textAlignment="textEnd" />
+                </TableRow>
+
+            </TableLayout>
+
+            <com.geqian.progressbar.ProgressBar
+                android:id="@+id/progressLevel"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                app:arrowPointRadius="6dp"
+                app:backgroundColor="#d8d8d8"
+                app:endFillColor="#e03060"
+                app:middleFillColor="#B03060"
+                app:startFillColor="#505050" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="5dp"
-                android:text="@string/select_num_oper"
-                android:textColor="@android:color/black"
-                android:textSize="@dimen/text_classic_mode" />
-
-            <co.ceryle.segmentedbutton.SegmentedButtonGroup
-                android:id="@+id/segmentedButtonGroup"
+                android:id="@+id/bestScore"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                app:sbg_animateSelector="fastOutSlowIn"
-                app:sbg_animateSelectorDuration="1000"
-                app:sbg_backgroundColor="@android:color/white"
-                app:sbg_dividerColor="@android:color/darker_gray"
-                app:sbg_dividerPadding="10dp"
-                app:sbg_dividerRadius="10dp"
-                app:sbg_dividerSize="1dp"
-                app:sbg_position="1"
-                app:sbg_radius="2dp"
-                app:sbg_ripple="true"
-                app:sbg_rippleColor="@android:color/darker_gray"
-                app:sbg_selectorColor="@android:color/holo_blue_dark"
-                app:sbg_selectorTextColor="@android:color/white"
-                app:sbg_shadow="false"
-                app:sbg_shadowElevation="3dp"
-                app:sbg_shadowMargin="4dp">
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="10dp"
-                    android:text="1" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="10dp"
-                    android:text="2" />
-
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:minHeight="10dp"
-                    android:text="3" />
-
-
-            </co.ceryle.segmentedbutton.SegmentedButtonGroup>
-
+                android:paddingTop="10dp"
+                android:text="Best score: 1123"
+                android:textAlignment="center" />
         </LinearLayout>
 
     </LinearLayout>
 
-    <co.ceryle.segmentedbutton.SegmentedButtonGroup
-        android:id="@+id/b"
+    <LinearLayout
+        android:id="@+id/layoutSettings"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="0dp"
-        android:layout_marginBottom="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="15dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:sbg_animateSelector="fastOutSlowIn"
-        app:sbg_animateSelectorDuration="1000"
-        app:sbg_backgroundColor="@android:color/white"
-        app:sbg_dividerColor="@android:color/darker_gray"
-        app:sbg_dividerPadding="0dp"
-        app:sbg_dividerRadius="0dp"
-        app:sbg_dividerSize="1dp"
-        app:sbg_position="0"
-        app:sbg_radius="0dp"
-        app:sbg_ripple="true"
-        app:sbg_rippleColor="@android:color/darker_gray"
-        app:sbg_selectorColor="@android:color/holo_blue_light"
-        app:sbg_selectorTextColor="@android:color/white"
-        app:sbg_shadow="false"
-        app:sbg_shadowElevation="3dp"
-        app:sbg_shadowMargin="4dp"
-        tools:layout_constraintBottom_creator="1"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1">
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRun">
 
-        <Button
-            android:id="@+id/button"
+        <com.roughike.swipeselector.SwipeSelector
+            android:id="@+id/swipeRange"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/begin" />
-    </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+            android:layout_height="wrap_content" />
+
+        <com.roughike.swipeselector.SwipeSelector
+            android:id="@+id/swipeOperations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:id="@+id/btnRun"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/begin"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:pb_colorComplete="@color/blue_normal"
+        app:pb_colorError="@color/red_error"
+        app:pb_colorNormal="@color/blue_normal"
+        app:pb_colorPressed="@color/blue_pressed"
+        app:pb_colorProgress="@color/purple_progress"
+        app:pb_textComplete="@string/begin"
+        app:pb_textError="Error"
+        app:pb_textProgress="@string/begin" />
 
 
 </android.support.constraint.ConstraintLayout>

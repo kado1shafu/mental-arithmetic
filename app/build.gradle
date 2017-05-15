@@ -34,10 +34,11 @@ dependencies {
     compile 'org.jetbrains.anko:anko-sdk15:0.9.1'
     compile 'org.jetbrains.anko:anko-support-v4:0.9.1'
     compile 'org.jetbrains.anko:anko-appcompat-v7:0.9.1'
-    compile 'com.github.zcweng:switch-button:0.0.3@aar'//https://github.com/zcweng/SwitchButton
-    compile 'com.github.ceryle:SegmentedButton:v1.2.2'//https://github.com/ceryle/SegmentedButton
-    compile 'com.xiaochendev.progressroundbtn:library:2.0.0'//https://github.com/cctanfujun/ProgressRoundButton
-    compile 'com.github.Hitomis:CircleMenu:v1.1.0'
+    compile 'com.github.zcweng:switch-button:0.0.3@aar'//switch button | https://github.com/zcweng/SwitchButton
+    compile 'com.github.Hitomis:CircleMenu:v1.1.0'//main menu | https://github.com/Hitomis/CircleMenu
+    compile 'com.geqian.progressbar:progressbar:1.0.0'//user progress | https://github.com/liihuu/ProgressBar
+    compile 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+    compile 'com.roughike:swipe-selector:1.0.6'//game swipe | https://github.com/roughike/SwipeSelector
     testCompile 'junit:junit:4.12'
 }
 repositories {

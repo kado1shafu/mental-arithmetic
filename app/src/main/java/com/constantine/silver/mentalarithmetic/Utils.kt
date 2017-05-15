@@ -29,3 +29,4 @@ inline fun delayStart(crossinline f: () -> Unit){
         f()
     }, 620)
 }
+
